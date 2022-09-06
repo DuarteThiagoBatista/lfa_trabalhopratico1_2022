@@ -14,7 +14,6 @@ def split_list(list_transitions):
         list_=[]
         list_.append(i.split(":")[0])
         split_=i.split(":")[1].split(">")[0]
-        print(split_)
         for  a in split_.split(","):
             list_.append(a)
         list_.append(i.split(":")[1].split(">")[1])
