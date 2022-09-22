@@ -1,4 +1,4 @@
-# lfa_trabalhopratico1_20222
+# lfa_trabalhopratico1_2022
 
 # Componentes do grupo:
 Duarte Thiago Batista de Ferreira Gomes
