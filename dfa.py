@@ -27,7 +27,7 @@ class DFA:
         return False
     
     def crete_image():
-        states,initial_state,accepting_states,alphabet,transitions,stransitions=file_read("automato")
+        states,initial_state,accepting_states,alphabet,transitions,stransitions=file_read("automatodfa")
         graphs = pydot.Dot('my_graph', graph_type='digraph', bgcolor='white')
         for i in states:
             if i in initial_state:
