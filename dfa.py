@@ -1,5 +1,4 @@
-import pydot
-from  functions import file_read
+
 
 
 class DFA:
@@ -26,29 +25,4 @@ class DFA:
             return True
         return False
     
-    def crete_image():
-        states,initial_state,accepting_states,alphabet,transitions,stransitions=file_read("automatodfa")
-        graphs = pydot.Dot('my_graph', graph_type='digraph', bgcolor='white')
-        for i in states:
-            if i in initial_state:
-                graphs.add_node(pydot.Node('fake' ,style="invisible"))
-                if i in accepting_states:
-                    graphs.add_node(pydot.Node(i,root="true", shape="doublecircle"))
-                else:
-                    graphs.add_node(pydot.Node(i,root="true"))
-                graphs.add_edge(pydot.Edge('fake',i, style="bold"))  
-            elif i in accepting_states:
-                graphs.add_node(pydot.Node(i,shape="doublecircle"))
-            else:
-                graphs.add_node(pydot.Node(i, shape='circle'))
-        
-        for i in stransitions:
-            a=i.split(":")
-            from_=a[0]
-            to=a[1].split(">")[1]
-            alphabet_=a[1].split(">")[0]
-            graphs.add_edge(pydot.Edge(from_,to ,label=alphabet_ ))
-
-
-        graphs.write_png('dfa.png')
-        
+   
